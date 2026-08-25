@@ -1,0 +1,38 @@
+{
+  "name": "genpark-clinical-conversation-ambient-scribe-soap-generator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Ambient clinical conversation scribe generating structured SOAP notes, ICD-10 medical coding, and EHR FHIR integrations for physicians.",
+  "author": "genpark",
+  "category": "healthcare-ai",
+  "tags": [
+    "clinical-scribe",
+    "soap-notes",
+    "ehr-integration",
+    "ambient-ai",
+    "abridge"
+  ],
+  "inputs": {
+    "patient_encounter_id": {
+      "type": "string"
+    },
+    "audio_transcript_snippet": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "encounter_id": {
+      "type": "string"
+    },
+    "subjective_summary": {
+      "type": "string"
+    },
+    "assessment_icd10_codes": {
+      "type": "array"
+    },
+    "ehr_epic_cerner_fhir_json_synced": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
